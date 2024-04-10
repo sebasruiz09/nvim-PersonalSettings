@@ -24,15 +24,15 @@ return {
     { "<C-p>", "<cmd>Telescope<cr>", mode = { "n" }, desc = "Telescope menu" },
     { "<C-b>", "<cmd>Telescope file_browser<cr>", mode = { "n" }, desc = "Telescope file browser" },
     { "<C-f>", "<cmd>Telescope find_files<cr>", mode = { "n" }, desc = "Telescope find files" },
-    { "<C-lg>", "<cmd>Telescope live_grep<cr>", mode = { "n" }, desc = "Telescope live grep" },
+    { "<leader>lg", "<cmd>Telescope live_grep<cr>", mode = { "n" }, desc = "Telescope live grep" },
   },
+
   config = function()
     local sorters = require("telescope.sorters")
     local actions = require("telescope.actions")
 
     require("telescope").load_extension("file_browser")
     require("telescope").load_extension("notify")
-
     require("telescope").setup({
       defaults = {
         mappings = {
