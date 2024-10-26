@@ -2,7 +2,7 @@ return {
   "nvim-treesitter/nvim-treesitter",
   dependencies = {
     "nvim-treesitter/nvim-treesitter-textobjects",
-    "HiPhish/nvim-ts-rainbow2",
+    "HiPhish/rainbow-delimiters.nvim",
   },
   build = ":TSUpdate",
   event = "VeryLazy",
@@ -24,20 +24,20 @@ return {
       sync_install = false,
       ignore_install = {},
       auto_install = true,
-      rainbow = {
-        enable = true,
-        query = "rainbow-parens",
-        strategy = require("ts-rainbow").strategy.global,
-        hlgroups = {
-          "TSRainbowRed",
-          "TSRainbowGreen",
-          "TSRainbowBlue",
-          "TSRainbowYellow",
-          "TSRainbowOrange",
-          "TSRainbowViolet",
-          "TSRainbowCyan",
-        },
-      },
+      --rainbow = {
+      --enable = true,
+      --query = "rainbow-delimiters",
+      --strategy = require("rainbow-delimiters").strategy["global"],
+      --hlgroups = {
+      --"RainbowDelimiterRed",
+      --"RainbowDelimiterYellow",
+      --"RainbowDelimiterBlue",
+      --"RainbowDelimiterOrange",
+      --"RainbowDelimiterGreen",
+      --"RainbowDelimiterViolet",
+      --"RainbowDelimiterCyan",
+      --},
+      --},
       highlight = {
         enable = true,
         use_languagetree = true,

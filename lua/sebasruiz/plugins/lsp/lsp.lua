@@ -15,7 +15,9 @@ return {
     automatic_installation = true,
     servers = {
       tsserver = {},
-      angularls = {},
+      angularls = {
+        filetypes = { "typescript", "html", "htmlangular" },
+      },
       jsonls = {},
       jq = {},
       html = {},

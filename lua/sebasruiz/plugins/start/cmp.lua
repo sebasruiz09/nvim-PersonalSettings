@@ -42,7 +42,6 @@ return {
   config = function()
     local cmp = require("cmp")
     local lspkind = require("lspkind")
-    local compare = cmp.config.compare
     cmp.setup({
       formatting = {
         format = lspkind.cmp_format({
@@ -81,9 +80,19 @@ return {
       sorting = {
         priority_weight = 2,
         comparators = {
-          compare.kind,
-          compare.sort_text,
+          cmp.config.compare.exact,
+          cmp.config.compare.offset,
+          cmp.config.compare.score,
+          cmp.config.compare.recently_used,
+          cmp.config.compare.kind,
+          cmp.config.compare.sort_text,
+          cmp.config.compare.length,
+          cmp.config.compare.order,
         },
+      },
+
+      experimental = {
+        ghost_text = false,
       },
 
       sources = cmp.config.sources({
