@@ -20,5 +20,8 @@ require("lazy").setup({
     { import = "sebasruiz.plugins.format" },
     { import = "sebasruiz.plugins.utils" },
   },
+  install = {
+    colorscheme = { "tokyonight-night" },
+  },
   checker = { enable = true, notify = true },
 })
