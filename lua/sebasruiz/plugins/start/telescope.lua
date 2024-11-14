@@ -6,7 +6,6 @@ return {
     { "nvim-lua/popup.nvim" },
     { "nvim-telescope/telescope-fzy-native.nvim" },
     { "kyazdani42/nvim-web-devicons" },
-    { "nvim-telescope/telescope-file-browser.nvim" },
     { "nvim-telescope/telescope-ui-select.nvim" },
     {
       "nvim-telescope/telescope-fzf-native.nvim",
@@ -22,16 +21,15 @@ return {
   },
   keys = {
     { "<C-p>", "<cmd>Telescope<cr>", mode = { "n" }, desc = "Telescope menu" },
-    { "<C-b>", "<cmd>Telescope file_browser<cr>", mode = { "n" }, desc = "Telescope file browser" },
     { "<C-f>", "<cmd>Telescope find_files<cr>", mode = { "n" }, desc = "Telescope find files" },
     { "<leader>lg", "<cmd>Telescope live_grep<cr>", mode = { "n" }, desc = "Telescope live grep" },
+    { "<leader>hh", "<cmd>Telescope notify<cr>", mode = { "n" }, desc = "Telescope notify" },
   },
 
   config = function()
     local sorters = require("telescope.sorters")
     local actions = require("telescope.actions")
 
-    require("telescope").load_extension("file_browser")
     require("telescope").load_extension("notify")
 
     require("telescope").setup({
