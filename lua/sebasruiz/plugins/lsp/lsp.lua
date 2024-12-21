@@ -74,7 +74,7 @@ return {
   },
 
   opts = {
-    ensure_installed = { "lua_ls", "tsserver", "angularls", "jsonls", "html", "css_ls" },
+    ensure_installed = { "lua_ls", "tsserver", "angularls", "jsonls", "html", "css_ls", "pyright" },
     automatic_installation = true,
     servers = {
       tsserver = {},
@@ -82,6 +82,10 @@ return {
         filetypes = { "typescript", "html", "htmlangular" },
       },
       jsonls = {},
+      pyright = {
+        single_file_support = true,
+        filetypes = { "python" },
+      },
       jq = {},
       html = {},
       bashls = {},
